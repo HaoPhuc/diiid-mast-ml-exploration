@@ -1,0 +1,38 @@
+check,result,verdict
+columns classified,189 of 189 data columns,PASS
+numeric columns stored as text,0 columns (converted in `num`),PASS
+facility carries no per-shot information,1 distinct value(s),PASS
+type_ carries no per-shot information,1 distinct value(s),PASS
+context_ carries no per-shot information,1 distinct value(s),PASS
+title carries no per-shot information,1 distinct value(s),PASS
+reference_shot == shot_reference,100.0% of 10605 shots with both,PASS
+"shots passing FILTER (useful == 1, abort != 1)",6589 of 11573,PASS
+MCS columns that are sparse (<50% filled) or have <= 2 values (supports IGNORE),0 of 0,PASS
+timing columns within -0.5..2 s (MAST pulses last < 1 s),34 of 38 columns have >95% of values in range,CHECK
+flat-top start <= flat-top end,100.0% of 11573 shots,PASS
+time of peak Ip <= plasma end,100.0% of 11572 shots,PASS
+NBI start <= NBI end,100.0% of 7305 shots,PASS
+generic_max_poloidal_area holds,"area (value) (rho: area (value)=0.64, time=-0.31)",PASS
+generic_min_radius_max_plasma holds,"time (rho: minor radius (value)=0.16, time=0.53)",PASS
+generic_max_beta_mhd holds,"time (rho: beta (value)=0.07, time=0.90)",PASS
+generic_max_beta_poloidal_mhd holds,"time (rho: beta_p (value)=0.12, time=0.70)",PASS
+generic_max_energy_time holds,"tau_E (value) (rho: tau_E (value)=0.52, time=0.26)",PASS
+nbi_power_max_current holds,"SW-beam power (rho: total SS+SW power=0.21, SW-beam power=0.75)",PASS
+nbi_injected_energy_ss_max_current holds,"SW-beam energy (rho: SS-beam energy=0.11, SW-beam energy=0.38)",PASS
+nbi_end_time_ss holds,"SW end time (rho: SS end time=0.15, SW end time=0.39)",PASS
+thomson_line_avg_density_co2 holds,"CO2 line average (rho: CO2 line average=0.90, YAG average=0.82)",CHECK
+nbi_power_max_current >= SS power (true if it is the total),55.6% of 4228 SS-heated shots,CHECK
+unit of plasma_max_current,median 733 -> ['kA'],PASS
+unit of generic_toroidal_max_current,median 0.451 -> ['T'],PASS
+unit of generic_geo_radius_max_current,median 0.816 -> ['m'],PASS
+unit of generic_minor_radius_max_current,median 0.575 -> ['m'],PASS
+unit of generic_plasma_vol_max_current,median 7.87 -> ['m^3'],PASS
+unit of thomson_density_max_current,median 3.05e+19 -> ['m^-3'],PASS
+unit of thomson_density_line_max_current,median 1.17e+20 -> ['m^-2'],PASS
+unit of thomson_temp_max_current,median 810 -> ['eV'],PASS
+unit of generic_energy_current_max,median 3.34e+04 -> ['J'],PASS
+unit of generic_energy_time_max_current,median 0.0212 -> ['s'],PASS
+unit of nbi_power_max_power,median 1.9 -> ['MW'],PASS
+unit of ohmnic_heating_max_current,median 0.753 -> ['MW'],PASS
+tau_E / (W / P_ohm) on ohmic-only shots (~1 means units and definitions agree),"median 1.03, IQR 0.92-1.13, n=3514",PASS
+"log beta ~ log W, log V, log B_T (expect exponents +1, -1, -2; high R^2 -> beta is LEAKAGE for W)","exponents +0.99, -0.94, -2.05; R^2=1.000; n=378",PASS
